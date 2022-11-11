@@ -1,0 +1,42 @@
+<template>
+    <lightning-card>
+        <h3 slot="title">
+            <lightning-icon icon-name="utility:connected_apps" size="small"></lightning-icon>
+             Busca por cep <p>{cep}</p>
+        </h3>
+        <div slot="footer">
+
+           
+
+        </div>
+        <lightning-input  class="slds-p-around_medium lgc-bg" onchange={handleCep} label="Digite o seu cep"></lightning-input>
+        <br>
+        
+
+        <div class="slds-p-around_medium lgc-bg">
+            <lightning-button label="Buscar" onclick={getCep}></lightning-button>
+        </div>
+
+      <div class="slds-p-around_medium lgc-bg">
+            <lightning-input readonly  label="Estado" value={dadosCep.Estado__c} ></lightning-input>
+       
+
+       
+            <lightning-input readonly  label="Cidade" value={dadosCep.Cidade__c} ></lightning-input>
+     
+
+       
+            <lightning-input readonly label ="Distrito" value={dadosCep.Distrito__c} ></lightning-input>
+       
+
+        
+            <lightning-input readonly  label="Rua" value={dadosCep.Name} ></lightning-input>
+
+      
+
+         </div>
+         <div class="slds-p-around_medium lgc-bg">
+            <lightning-button label="Salvar" onclick={getSalvar}></lightning-button>
+        </div>
+    </lightning-card>
+</template>
